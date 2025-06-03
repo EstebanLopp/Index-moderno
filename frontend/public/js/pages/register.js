@@ -2,14 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const form = document.querySelector('.form');
-    // const usersList = document.querySelector('.users-list');    
+    const usersList = document.querySelector('.users-list');    
 
     // Función para agregar un usuario a la lista
-    // const addUserToList = (user) => {
-    //     const item = document.createElement('li');
-    //     item.textContent = `${user.name} - ${user.email} - ${user.address} - ${user.phone}`;
-    //     usersList.appendChild(item);
-    // };
+    const addUserToList = (user) => {
+        const item = document.createElement('li');
+        item.textContent = `${user.name} - ${user.email} - ${user.phone}`;
+        usersList.appendChild(item);
+    };
+
     if (!form) return; // Verificar si el formulario existe antes de continuar
 
     form.addEventListener('submit', async (event) => {
@@ -52,4 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
         }
     });
+
+
+//  Cargar lista de usuarios
+fetch('http://localhost:3000/user')
+.then(response => response.json())
+.then(data => {
+    data.forEach(user => addUserToList(user));
+})
+.catch(error => console.error('Error:', error));
 });
