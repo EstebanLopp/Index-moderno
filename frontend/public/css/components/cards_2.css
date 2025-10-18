@@ -1,0 +1,107 @@
+.brands {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  grid-auto-rows: 400px; /* altura fija de las cards */
+  gap: 6px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brand {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.brand:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+.brand__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transition: background 0.3s ease;
+}
+
+.brand:hover .brand__overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.brand__content {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+}
+
+.brand__logo {
+  margin-left: 95px;
+  width: 90px;
+  height: auto;
+  margin-bottom: 15px;
+  filter: brightness(0) invert(1);
+}
+
+.brand__title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.brand__description {
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.brand__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.brand__btn {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.brand__btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ==== Fondos individuales ==== */
+.brand--tecnova {
+  background-color: #7B8FA1;
+}
+
+.brand--lumina {
+  background-color: white;;
+}
+
+.brand--sabory {
+  background-color: white;;
+}
+
+.brand--stride {
+  background-color: white;
+}
+
+/* ==== Responsividad ==== */
+@media (max-width: 900px) {
+  .brands {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

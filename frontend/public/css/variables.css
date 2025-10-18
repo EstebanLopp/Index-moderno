@@ -54,6 +54,9 @@
     --fs-md: 2.4rem;  /* Mediano */
     --fs-sm: 2.0rem;  /* Pequeño */
     --fs-xs: 1.6rem;  /* Extra pequeño */
+    --fs-xls: 1.5rem; /* Extra pequeño medio */
     --fs-xxs: 1.4rem; /* Extra extra pequeño */
-    --fs-xxxs: 1.2rem; /* Mínimo */
+    --fs-xxxs: 1.2rem; /*Mínimo*/
+    --fs-xxxxs: 1.0rem; /* Mínimo pequeño */
+    --fs-xxxxx: 0.8rem; /* Mínimo extra pequeño */
 }

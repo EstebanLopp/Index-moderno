@@ -1,0 +1,89 @@
+.bienvenida {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid black;
+}
+
+/* Lado izquierdo - imagen */
+.bienvenida__imagen {
+  flex: 1;
+  background-image: url("/frontend/public/assets/welcome_image.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(1.2);
+  border: 2px solid black;
+}
+
+/* Lado derecho - texto */
+.bienvenida__contenido {
+  flex: 1;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.bienvenida__subtitulo {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.bienvenida__titulo {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.bienvenida__descripcion {
+  font-size: var(--fs-xxs);
+  color: #444;
+  max-width: 450px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.bienvenida__boton {
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  padding: 12px 40px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.bienvenida__boton:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .bienvenida {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .bienvenida__imagen {
+    height: 50vh;
+  }
+
+  .bienvenida__contenido {
+    padding: 40px 20px;
+  }
+
+  .bienvenida__titulo {
+    font-size: 2.2rem;
+  }
+}

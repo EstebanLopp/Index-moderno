@@ -1,0 +1,65 @@
+.entertainment {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* Degradado sobre la imagen de fondo */
+  background: linear-gradient(
+      to right, 
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.8)
+    ),
+    url('/frontend/public/assets/image_background.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--white);
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+
+.entertainment__content {
+  max-width: 600px;
+}
+
+.entertainment__category {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.entertainment__title {
+  font-size: 3rem;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.entertainment__desc {
+  font-size: var(--fs-xxs);
+  margin-bottom: 20px;
+}
+
+.entertainment__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.entertainment__btn {
+  padding: 12px 24px;
+  font-size: 14px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.entertainment__btn--primary:hover {
+  background: #fff;
+  color: #000;
+}
+
+.entertainment__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.7);
+}

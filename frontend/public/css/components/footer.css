@@ -1,0 +1,124 @@
+.footer {
+    position: static;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    z-index: 100;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    font-family: var(--fs-xxxxs);
+    min-block-size: 40px;
+    gap: 4rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer__copyright {
+    font-size: var(--fs-xxs);
+    text-align: center;
+    flex-basis: 100%;
+    margin-top: 1rem;
+}
+
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-inline-end: 4rem;
+}
+
+.footer__link {
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-xxs);
+    color: var(--white);
+    text-decoration: none;;
+    gap: 0.5rem;
+}
+
+.footer__link img {
+    inline-size: 20px;
+    block-size: 20px;
+    object-fit: contain;
+}
+
+.footer__right {
+    display: flex;
+    font-size: var(--fs-xxxxs);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__contact {
+    display: flex;
+    font-size: var(--fs-xxs);
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    gap: 0.3rem;
+    transition: opacity 0.2s;
+}
+
+.footer__contact img {
+    inline-size: 16px;
+    block-size: 16px;
+    object-fit: contain;
+}
+.footer__contact:hover {
+    opacity: 0.7;
+}
+
+.footer__copyright {
+    font-size: var(--fs-xxs);
+}
+
+@media (max-width: 600px) {
+    .footer {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1.5rem;
+        padding: 1rem;
+        justify-content: center;
+        align-items: start;
+        text-align: center;
+    }
+
+    .footer__left {
+        grid-column: 1;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__right {
+        grid-column: 2;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .footer__copyright {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
+
+.footer__wowheare-icon {
+    padding: 5px;
+}
+
