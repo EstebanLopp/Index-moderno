@@ -10,11 +10,12 @@
 .brand {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   color: #fff;
+  border: 1px solid black;
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
@@ -41,14 +42,15 @@
 }
 
 .brand__logo {
-  margin-left: 95px;
-  width: 90px;
+  display: block;
+  margin: 0 auto; /* centra horizontalmente */
+  width: 250px;
   height: auto;
-  margin-bottom: 15px;
-  filter: brightness(0) invert(1);
 }
 
+
 .brand__title {
+  margin-top: -2rem;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 700;
@@ -83,19 +85,19 @@
 
 /* ==== Fondos individuales ==== */
 .brand--tecnova {
-  background-color: #7B8FA1;
+  background: linear-gradient(135deg, #2c2c2c, #595959);
 }
 
 .brand--lumina {
-  background-color: white;;
+  background: linear-gradient(135deg, #4a2c35, #b88b97);
 }
 
 .brand--sabory {
-  background-color: white;;
+  background: linear-gradient(135deg, #1a1a1a, #2d3a3f);
 }
 
 .brand--stride {
-  background-color: white;
+  background: linear-gradient(135deg, #3b2f2f, #7a5f48);
 }
 
 /* ==== Responsividad ==== */
